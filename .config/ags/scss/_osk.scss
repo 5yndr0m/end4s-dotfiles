@@ -1,22 +1,22 @@
-$osk_key_height: 2.5rem;
-$osk_key_width: 2.5rem;
-$osk_key_padding: 0.188rem;
-$osk_key_rounding: 0.545rem;
-$osk_key_fontsize: 1.091rem;
+$osk_key_height: 2.5rem*$scale_factor;
+$osk_key_width: 2.5rem*$scale_factor;
+$osk_key_padding: 0.188rem*$scale_factor;
+$osk_key_rounding: 0.545rem*$scale_factor;
+$osk_key_fontsize: 1.091rem*$scale_factor;
 
 .osk-window {
     // @include menu_decel_fast;
     @include large-rounding;
     @include elevation-border;
     @include elevation2;
-    // min-height: 29.591rem;
-    // min-width: 50rem;
+    // min-height: 29.591rem*$scale_factor;
+    // min-width: 50rem*$scale_factor;
     background-color: $layer0;
 }
 
 .osk-body {
-    padding: 1.023rem;
-    padding-top: 0rem;
+    padding: 1.023rem*$scale_factor;
+    padding-top: 0rem*$scale_factor;
 }
 
 .osk-show {
@@ -24,8 +24,8 @@ $osk_key_fontsize: 1.091rem;
 }
 
 .osk-hide {
-    margin-top: 30.682rem;
-    margin-bottom: -30.682rem;
+    margin-top: 30.682rem*$scale_factor;
+    margin-bottom: -30.682rem*$scale_factor;
     // opacity: 0;
     @include menu_accel_fast;
 }
@@ -33,10 +33,10 @@ $osk_key_fontsize: 1.091rem;
 .osk-dragline {
     @include full-rounding;
     background-color: $onLayer0Inactive;
-    min-height: 0.273rem;
-    min-width: 10.227rem;
-    margin-top: 0.545rem;
-    margin-bottom: 0.205rem;
+    min-height: 0.273rem*$scale_factor;
+    min-width: 10.227rem*$scale_factor;
+    margin-top: 0.545rem*$scale_factor;
+    margin-bottom: 0.205rem*$scale_factor;
 }
 
 .osk-key {
@@ -68,28 +68,28 @@ $osk_key_fontsize: 1.091rem;
 }
 
 .osk-key-fn {
-    min-width: $osk_key_width * 1.005;
-    min-height: calc($osk_key_height / 2); // dart-sass
+    min-width: $osk_key_width * 1.005*$scale_factor;
+    min-height: calc($osk_key_height / 2)*$scale_factor; // dart-sass
     // min-height: $osk_key_height / 2; // sassc
 }
 
 .osk-key-tab {
-    min-width: $osk_key_width * 1.6;
+    min-width: $osk_key_width * 1.6*$scale_factor;
     min-height: $osk_key_height;
 }
 
 .osk-key-caps {
-    min-width: $osk_key_width * 1.9;
+    min-width: $osk_key_width * 1.9*$scale_factor;
     min-height: $osk_key_height;
 }
 
 .osk-key-shift {
-    min-width: $osk_key_width * 2.5;
+    min-width: $osk_key_width * 2.5*$scale_factor;
     min-height: $osk_key_height;
 }
 
 .osk-key-control {
-    min-width: $osk_key_width * 1.3;
+    min-width: $osk_key_width * 1.3*$scale_factor;
     min-height: $osk_key_height;
 }
 
@@ -99,7 +99,7 @@ $osk_key_fontsize: 1.091rem;
     color: $onLayer1;
     font-weight: 500;
     font-size: $osk_key_fontsize;
-    padding: 0.682rem;
+    padding: 0.682rem*$scale_factor;
 }
 
 .osk-control-button:hover,

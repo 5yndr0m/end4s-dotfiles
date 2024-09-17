@@ -4,6 +4,18 @@
 // }
 *:not(popover) { all: unset; }
 
+// Was made to be pixel-perfect with 11pt font size
+// And now it's not
+// Fits  1368x768 , 110.4 PPI, 16:10 (WXGA (Wide Extended Graphics Array)) 
+// And these things have lower pixel density than both 720p and 1080p
+// This might/ might not work with your 720p
+// Do some research!!
+// Yeah this is old
+// since this is an oddball situation, i will try few scaling factors
+// I will pick which ever looks good to me. all you have to do is use a one that will match yours.
+// I will use variables just for the sake of modularity.
+
+$scale_factor:0.75;
 // Colors
 @import 'material'; // Material colors
 @import './colors'; // Global color definitions. Uses material colors as base.
@@ -35,8 +47,8 @@
     transition: 50ms cubic-bezier(0.2, 0.0, 0, 1.0);
 }
 .sidebar-pinned {
-    margin: 0rem;
-    border-radius: 0rem;
+    margin: 0rem*$scale_factor;
+    border-radius: 0rem*$scale_factor;
     border-bottom-right-radius: $rounding_large;
-    border: 0rem solid;
+    border: 0rem*$scale_factor solid;
 }
