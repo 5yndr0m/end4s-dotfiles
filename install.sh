@@ -150,8 +150,8 @@ case $SKIP_HYPR_AUR in
   *)
 	  hyprland_installflags="-S"
 	  $ask || hyprland_installflags="$hyprland_installflags --noconfirm"
-    v yay $hyprland_installflags --asdeps hyprutils-git hyprlang-git hyprcursor-git hyprwayland-scanner-git
-    v yay $hyprland_installflags --answerclean=a hyprland-git
+    v yay $hyprland_installflags --asdeps hyprutils hyprlang hyprcursor hyprwayland-scanner
+    v yay $hyprland_installflags --answerclean=a hyprland
     ;;
 esac
 
