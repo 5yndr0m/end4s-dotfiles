@@ -9,48 +9,48 @@
 
 .bg-time-box {
     @include large-rounding;
-    margin: 2.045rem;
-    padding: 0.682rem;
+    margin: 2.045rem * $scale_factor;
+    padding: 0.682rem * $scale_factor;
 }
 
 .bg-time-clock {
     @include titlefont;
     @include bg-textshadow;
-    font-size: 5.795rem;
+    font-size: 5.795rem * $scale_factor;
     color: $onLayer0;
 }
 
 .bg-time-date {
     @include titlefont;
     @include bg-textshadow;
-    font-size: 2.591rem;
+    font-size: 2.591rem * $scale_factor;
     color: $onLayer0;
 }
 
 .bg-distro-box {
     @include large-rounding;
-    margin: 2.045rem;
-    padding: 0.682rem;
+    margin: 2.045rem * $scale_factor;
+    padding: 0.682rem * $scale_factor;
 }
 
 .bg-distro-txt {
     @include titlefont;
     @include bg-textshadow;
-    font-size: 1.432rem;
+    font-size: 1.432rem * $scale_factor;
     color: $onLayer0;
 }
 
 .bg-distro-name {
     @include titlefont;
     @include bg-textshadow;
-    font-size: 1.432rem;
+    font-size: 1.432rem * $scale_factor;
     color: $onSecondaryContainer;
 }
 
 .bg-graph {
     color: rgba(255, 255, 255, 0.5);
-    border-radius: 0.614rem;
-    border: 0.682rem solid;
+    border-radius: 0.614rem * $scale_factor;
+    border: 0.682rem * $scale_factor solid;
 }
 
 .bg-quicklaunch-title {
@@ -63,9 +63,9 @@
     @include full-rounding;
     background-color: $layer2;
     color: $onLayer2;
-    min-width: 4.432rem;
-    min-height: 2.045rem;
-    padding: 0.273rem 0.682rem;
+    min-width: 4.432rem * $scale_factor;
+    min-height: 2.045rem * $scale_factor;
+    padding: 0.273rem * $scale_factor 0.682rem * $scale_factor;
 }
 
 .bg-quicklaunch-btn:hover,
@@ -84,9 +84,9 @@
 
 .bg-system-circprog {
     @include fluent_decel_long;
-    min-width: 0.205rem; // Trough stroke width
-    min-height: 4.091rem; // Diameter
+    min-width: 0.205rem * $scale_factor; // Trough stroke width
+    min-height: 4.091rem * $scale_factor; // Diameter
     font-size: 0px;
-    padding: 0rem;
+    padding: 0rem * $scale_factor;
     background-color: $layer2;
 }

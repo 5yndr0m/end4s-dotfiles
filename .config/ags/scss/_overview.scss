@@ -1,5 +1,5 @@
 .overview-window {
-    margin-top: 2.727rem;
+    margin-top: 2.727rem * $scale_factor;
 }
 
 .overview-search-box {
@@ -7,10 +7,10 @@
     @include large-rounding;
     @include elevation-border;
     @include elevation2;
-    min-width: 13.636rem;
-    min-height: 3.409rem;
-    padding: 0rem 1.364rem;
-    padding-right: 2.864rem;
+    min-width: 13.636rem * $scale_factor;
+    min-height: 3.409rem * $scale_factor;
+    padding: 0rem * $scale_factor 1.364rem * $scale_factor;
+    padding-right: 2.864rem * $scale_factor;
     background-color: $background;
     color: $onBackground;
 
@@ -23,7 +23,7 @@
 }
 
 .overview-search-box-extended {
-    min-width: 25.909rem;
+    min-width: 25.909rem * $scale_factor;
     caret-color: $onSecondaryContainer;
 }
 
@@ -32,17 +32,17 @@
 }
 
 .overview-search-icon {
-    margin: 0rem 1.023rem;
+    margin: 0rem * $scale_factor 1.023rem * $scale_factor;
 }
 
 .overview-search-prompt-box {
-    margin-left: -18.545rem;
-    margin-right: $elevation_margin + 0.068rem;
+    margin-left: -18.545rem * $scale_factor;
+    margin-right: ($elevation_margin + 0.068rem) * $scale_factor;
 }
 
 .overview-search-icon-box {
-    margin-left: -18.545rem;
-    margin-right: $elevation_margin + 0.068rem;
+    margin-left: -18.545rem * $scale_factor;
+    margin-right: ($elevation_margin + 0.068rem) * $scale_factor;
 }
 
 .overview-search-results {
@@ -51,34 +51,34 @@
     @include large-rounding;
     @include elevation-border;
     @include elevation2;
-    min-width: 28.773rem;
-    padding: 0.682rem;
+    min-width: 28.773rem * $scale_factor;
+    padding: 0.682rem * $scale_factor;
     background-color: $layer0;
     color: $onLayer0;
 }
 
 .overview-search-results-icon {
-    margin: 0rem 0.682rem;
-    font-size: 2.386rem;
-    min-width: 2.386rem;
-    min-height: 2.386rem;
+    margin: 0rem * $scale_factor 0.682rem * $scale_factor;
+    font-size: 2.386rem * $scale_factor;
+    min-width: 2.386rem * $scale_factor;
+    min-height: 2.386rem * $scale_factor;
 }
 
 .overview-search-results-txt {
-    margin-right: 0.682rem;
+    margin-right: 0.682rem * $scale_factor;
 }
 
 .overview-search-results-txt-cmd {
-    margin-right: 0.682rem;
+    margin-right: 0.682rem * $scale_factor;
     @include techfont;
-    font-size: 1.227rem;
+    font-size: 1.227rem * $scale_factor;
 }
 
 .overview-search-result-btn {
     @include normal-rounding;
-    padding: 0.341rem;
-    min-width: 2.386rem;
-    min-height: 2.386rem;
+    padding: 0.341rem * $scale_factor;
+    min-width: 2.386rem * $scale_factor;
+    min-height: 2.386rem * $scale_factor;
 
     caret-color: transparent;
 }
@@ -96,7 +96,7 @@
     @include large-rounding;
     @include elevation-border;
     @include elevation2;
-    padding: 0.341rem;
+    padding: 0.341rem * $scale_factor;
     background-color: $background;
     color: $onBackground;
 }
@@ -104,7 +104,7 @@
 .overview-tasks-workspace {
     @include normal-rounding;
     // @include elevation-border;
-    margin: 0.341rem;
+    margin: 0.341rem * $scale_factor;
     background-color: $layer1;
 }
 
@@ -118,7 +118,7 @@
     @include menu_decel;
     background-color: transparentize($layer3, 0.2);
     color: $onSurface;
-    border: 0.068rem solid $surfaceContainerHighest;
+    border: 0.068rem * $scale_factor solid $surfaceContainerHighest;
 }
 
 .overview-tasks-window:hover,

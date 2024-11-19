@@ -20,10 +20,10 @@
 menu {
     @include small-rounding;
     border: 1px solid mix($surfaceContainer, $onBackground, 80%); // I hate this
-    padding: 0.681rem;
+    padding: 0.681rem * $scale_factor;
     background: opacify($surfaceContainer, 1);
     color: $onSurface;
-    -gtk-outline-radius: 1.159rem;
+    -gtk-outline-radius: 1.159rem * $scale_factor;
 
     animation-name: appear;
     animation-duration: 40ms;
@@ -32,18 +32,18 @@ menu {
 }
 
 menubar>menuitem {
-    border-radius: 0.545rem;
-    -gtk-outline-radius: 0.545rem;
-    min-width: 13.636rem;
-    min-height: 2.727rem;
+    border-radius: 0.545rem * $scale_factor;
+    -gtk-outline-radius: 0.545rem * $scale_factor;
+    min-width: 13.636rem * $scale_factor;
+    min-height: 2.727rem * $scale_factor;
 }
 
 menu>menuitem {
-    padding: 0.4em 1.5rem;
+    padding: 0.4em * $scale_factor 1.5rem * $scale_factor;
     background: transparent;
     transition: 0.2s ease background-color;
-    border-radius: 0.545rem;
-    -gtk-outline-radius: 0.545rem;
+    border-radius: 0.545rem * $scale_factor;
+    -gtk-outline-radius: 0.545rem * $scale_factor;
 }
 
 menu>menuitem:hover,
@@ -57,10 +57,10 @@ menu>menuitem:active {
 
 radio {
     @include full-rounding;
-    margin: 0.273rem;
+    margin: 0.273rem * $scale_factor;
     min-width: 15px;
     min-height: 15px;
-    border: 0.068rem solid $outline;
+    border: 0.068rem * $scale_factor solid $outline;
 }
 
 // radio:first-child {
@@ -71,7 +71,7 @@ radio:checked {
     min-width: 8px;
     min-height: 8px;
     background-color: $onPrimary;
-    border: 0.477rem solid $primary;
+    border: 0.477rem * $scale_factor solid $primary;
 }
 
 tooltip {
@@ -96,11 +96,11 @@ tooltip {
 
 popover {
     @include elevation-border-softer;
-    padding: 0.681rem;
+    padding: 0.681rem * $scale_factor;
     background: $surfaceContainerHigh;
     color: $onSurface;
-    border-radius: 1.159rem;
-    -gtk-outline-radius: 1.159rem;
+    border-radius: 1.159rem * $scale_factor;
+    -gtk-outline-radius: 1.159rem * $scale_factor;
 
     animation-name: appear;
     animation-duration: 40ms;
@@ -112,20 +112,20 @@ popover {
 /////////////////////////////////////////
 
 .configtoggle-box {
-    padding: 0.205rem 0.341rem;
+    padding: 0.205rem * $scale_factor 0.341rem * $scale_factor;
 }
 
 .switch-bg {
     @include element_decel;
     @include full-rounding;
-    border: 0.136rem solid $onSurface;
-    min-width: 2.864rem;
-    min-height: 1.637rem;
+    border: 0.136rem * $scale_factor solid $onSurface;
+    min-width: 2.864rem * $scale_factor;
+    min-height: 1.637rem * $scale_factor;
 }
 
 .switch-bg-true {
     background-color: $primary;
-    border: 0.136rem solid $primary;
+    border: 0.136rem * $scale_factor solid $primary;
 }
 
 .switch-fg {
@@ -133,28 +133,28 @@ popover {
     @include menu_decel;
     background-color: $onSurface;
     color: $layer1;
-    min-width: 0.819rem;
-    min-height: 0.819rem;
-    margin-left: 0.477rem;
+    min-width: 0.819rem * $scale_factor;
+    min-height: 0.819rem * $scale_factor;
+    margin-left: 0.477rem * $scale_factor;
 }
 
 .switch-fg-true {
     background-color: $onPrimary;
     color: $primary;
-    min-width: 1.431rem;
-    min-height: 1.431rem;
-    margin-left: 1.431rem;
+    min-width: 1.431rem * $scale_factor;
+    min-height: 1.431rem * $scale_factor;
+    margin-left: 1.431rem * $scale_factor;
 }
 
 .switch-fg-toggling-false {
     @include menu_decel;
-    min-width: 1.636rem;
-    min-height: 0.819rem;
+    min-width: 1.636rem * $scale_factor;
+    min-height: 0.819rem * $scale_factor;
 }
 
 .segment-container {
     @include full-rounding;
-    border: 0.068rem solid $outline;
+    border: 0.068rem * $scale_factor solid $outline;
 }
 
 .segment-container>*:first-child {
@@ -163,12 +163,12 @@ popover {
 }
 
 .segment-container>* {
-    border-right: 0.068rem solid $outline;
-    padding: 0.341rem 0.682rem;
+    border-right: 0.068rem * $scale_factor solid $outline;
+    padding: 0.341rem * $scale_factor 0.682rem * $scale_factor;
 }
 
 .segment-container>*:last-child {
-    border-right: 0rem solid transparent;
+    border-right: 0rem * $scale_factor solid transparent;
     border-top-right-radius: 9999px;
     border-bottom-right-radius: 9999px;
 }
@@ -197,8 +197,8 @@ popover {
 
 .multipleselection-btn {
     @include small-rounding;
-    padding: 0rem 0.341rem;
-    border: 0.034rem solid $outline;
+    padding: 0rem * $scale_factor 0.341rem * $scale_factor;
+    border: 0.034rem * $scale_factor solid $outline;
     color: $onSurface;
 }
 
@@ -220,33 +220,33 @@ popover {
 }
 
 .gap-v-5 {
-    min-height: 0.341rem;
+    min-height: 0.341rem * $scale_factor; 
 }
 
 .gap-h-5 {
-    min-width: 0.341rem;
+    min-width: 0.341rem * $scale_factor;
 }
 
 .gap-v-10 {
-    min-height: 0.682rem;
+    min-height: 0.682rem * $scale_factor;
 }
 
 .gap-h-10 {
-    min-width: 0.682rem;
+    min-width: 0.682rem * $scale_factor;
 }
 
 .gap-v-15 {
-    min-height: 1.023rem;
+    min-height: 1.023rem * $scale_factor;
 }
 
 .gap-h-15 {
-    min-width: 1.023rem;
+    min-width: 1.023rem * $scale_factor;
 }
 
 .tab-btn {
     @include small-rounding;
     @include element_decel;
-    min-height: 2.5rem;
+    min-height: 2.5rem * $scale_factor;
     color: $onLayer0;
 }
 
@@ -264,17 +264,17 @@ popover {
 
 .tab-indicator {
     transition: 180ms ease-in-out; // Doesn't look that good, but it syncs with the GtkStack
-    min-height: 0.205rem;
-    padding: 0rem 1.023rem;
+    min-height: 0.205rem * $scale_factor;
+    padding: 0rem * $scale_factor 1.023rem * $scale_factor;
     color: $primary;
 }
 
 .tab-icon {
     @include element_decel;
     @include full-rounding;
-    min-width: 2.25rem;
-    min-height: 2.25rem;
-    font-size: 1.406rem;
+    min-width: 2.25rem * $scale_factor;
+    min-height: 2.25rem * $scale_factor;
+    font-size: 1.406rem * $scale_factor;
     color: $onSurface;
 }
 
@@ -286,18 +286,18 @@ popover {
 .tab-icon-expandable {
     transition: 0ms;
     @include full-rounding;
-    min-width: 2.25rem;
-    min-height: 2.25rem;
-    font-size: 1.406rem;
+    min-width: 2.25rem * $scale_factor;
+    min-height: 2.25rem * $scale_factor;
+    font-size: 1.406rem * $scale_factor;
     color: $onSurface;
-    padding: 0rem;
+    padding: 0rem * $scale_factor;
 }
 
 .tab-icon-expandable-active {
     background-color: $secondaryContainer;
     color: $onSecondaryContainer;
-    padding: 0rem 0.545rem;
-    min-width: 9.545rem;
+    padding: 0rem * $scale_factor 0.545rem * $scale_factor;
+    min-width: 9.545rem * $scale_factor;
 }
 
 widget {
@@ -307,13 +307,13 @@ widget {
 .spinbutton {
     @include small-rounding;
     background-color: $layer2;
-    padding: 0.341rem;
+    padding: 0.341rem * $scale_factor;
     entry {
         color: $onLayer2;
-        margin: 0.136rem 0.273rem;
+        margin: 0.136rem * $scale_factor 0.273rem * $scale_factor;
     }
     button {
-        margin-left: 0.205rem;
-        padding: 0.136rem;
+        margin-left: 0.205rem * $scale_factor;
+        padding: 0.136rem * $scale_factor;
     }
 }

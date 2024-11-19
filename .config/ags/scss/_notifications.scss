@@ -7,7 +7,7 @@
     background-color: $layer2;
     color: $onLayer2;
     padding: $rounding_small;
-    padding-right: $rounding_small + 0.545rem;
+    padding-right: ($rounding_small + 0.545rem) * $scale_factor;
 }
 
 .notif-normal {
@@ -15,7 +15,7 @@
     background-color: $layer2;
     color: $onLayer2;
     padding: $rounding_small;
-    padding-right: $rounding_small + 0.545rem;
+    padding-right: ($rounding_small + 0.545rem) * $scale_factor;
 }
 
 .notif-critical {
@@ -23,7 +23,7 @@
     background-color: $secondaryContainer;
     color: $onSecondaryContainer;
     padding: $rounding_small;
-    padding-right: $rounding_small + 0.545rem;
+    padding-right: ($rounding_small + 0.545rem) * $scale_factor;
 }
 
 .notif-clicked-low {
@@ -41,42 +41,42 @@
 
 .popup-notif-low {
     @include notif-rounding;
-    min-width: 30.682rem;
+    min-width: 30.682rem * $scale_factor;
     background-color: $layer2;
 
     @if $transparent ==True {
         background-color: $layer0;
     }
 
-    border: 0.034rem solid $outlineVariant;
+    border: 0.034rem * $scale_factor solid $outlineVariant;
     color: $onLayer2;
     padding: $rounding_small;
-    padding-right: $rounding_small + 0.545rem;
+    padding-right: ($rounding_small + 0.545rem) * $scale_factor;
 }
 
 .popup-notif-normal {
     @include notif-rounding;
-    min-width: 30.682rem;
+    min-width: 30.682rem * $scale_factor;
     background-color: $layer2;
 
     @if $transparent ==True {
         background-color: $layer0;
     }
 
-    border: 0.034rem solid $outlineVariant;
+    border: 0.034rem * $scale_factor solid $outlineVariant;
     color: $onLayer2;
     padding: $rounding_small;
-    padding-right: $rounding_small + 0.545rem;
+    padding-right: ($rounding_small + 0.545rem) * $scale_factor;
 }
 
 .popup-notif-critical {
     @include notif-rounding;
-    min-width: 30.682rem;
+    min-width: 30.682rem * $scale_factor;
     background-color: $secondaryContainer;
-    border: 0.034rem solid $onSecondaryContainer;
+    border: 0.034rem * $scale_factor solid $onSecondaryContainer;
     color: $onSecondaryContainer;
     padding: $rounding_small;
-    padding-right: $rounding_small + 0.545rem;
+    padding-right: ($rounding_small + 0.545rem) * $scale_factor;
 }
 
 .popup-notif-clicked-low {
@@ -106,9 +106,9 @@
 
 .notif-icon {
     @include full-rounding;
-    min-width: 3.409rem;
-    min-height: 3.409rem;
-    font-size: 2.182rem;
+    min-width: 3.409rem * $scale_factor;
+    min-height: 3.409rem * $scale_factor;
+    font-size: 2.182rem * $scale_factor;
 }
 
 .notif-icon-material {
@@ -133,8 +133,8 @@
 
 .notif-expand-btn {
     @include notif-rounding;
-    min-width: 1.841rem;
-    min-height: 1.841rem;
+    min-width: 1.841rem * $scale_factor;
+    min-height: 1.841rem * $scale_factor;
 }
 
 .notif-expand-btn:hover,
@@ -148,7 +148,7 @@
 
 .notif-listaction-btn {
     @include notif-rounding;
-    padding: 0.341rem 0.682rem;
+    padding: 0.341rem * $scale_factor 0.682rem * $scale_factor;
 }
 
 .notif-listaction-btn:hover,
@@ -177,35 +177,35 @@
 .osd-notif {
     @include notif-rounding;
     background-color: $layer0;
-    min-width: 30.682rem;
+    min-width: 30.682rem * $scale_factor;
 }
 
 .notif-circprog-low {
     transition: 0ms linear;
-    min-width: 0.136rem; // line width
-    min-height: 3.136rem;
-    padding: 0rem;
+    min-width: 0.136rem * $scale_factor; // line width
+    min-height: 3.136rem * $scale_factor;
+    padding: 0rem * $scale_factor;
     color: $onSecondaryContainer;
 }
 
 .notif-circprog-normal {
     transition: 0ms linear;
-    min-width: 0.136rem; // line width
-    min-height: 3.136rem;
-    padding: 0rem;
+    min-width: 0.136rem * $scale_factor; // line width
+    min-height: 3.136rem * $scale_factor;
+    padding: 0rem * $scale_factor;
     color: $onSecondaryContainer;
 }
 
 .notif-circprog-critical {
     transition: 0ms linear;
-    min-width: 0.136rem; // line width
-    min-height: 3.136rem;
-    padding: 0rem;
+    min-width: 0.136rem * $scale_factor; // line width
+    min-height: 3.136rem * $scale_factor;
+    padding: 0rem * $scale_factor;
     color: $secondaryContainer;
 }
 
 .notif-actions {
-    min-height: 2.045rem;
+    min-height: 2.045rem * $scale_factor;
 }
 
 .notif-action {
@@ -219,7 +219,7 @@
 
 .notif-action-low:focus,
 .notif-action-low:hover {
-    border: 0.040rem solid $outlineVariant;
+    border: 0.040rem * $scale_factor solid $outlineVariant;
 }
 
 .notif-action-low:active {
@@ -233,7 +233,7 @@
 
 .notif-action-normal:focus,
 .notif-action-normal:hover {
-    border: 0.040rem solid $outlineVariant;
+    border: 0.040rem * $scale_factor solid $outlineVariant;
 }
 
 .notif-action-normal:active {
@@ -247,7 +247,7 @@
 
 .notif-action-critical:focus,
 .notif-action-critical:hover {
-    border: 0.040rem solid $outline;
+    border: 0.040rem * $scale_factor solid $outline;
 }
 
 .notif-action-critical:active {

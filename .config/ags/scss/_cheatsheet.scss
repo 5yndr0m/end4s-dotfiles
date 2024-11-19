@@ -2,9 +2,9 @@
     @include large-rounding;
     @include elevation-border;
     @include elevation2;
-    margin-bottom: 0.682rem;
+    margin-bottom: 0.682rem * $scale_factor;
     background-color: $layer0;
-    padding: 1.364rem;
+    padding: 1.364rem * $scale_factor;
 }
 
 .cheatsheet-title {
@@ -12,26 +12,26 @@
 }
 
 .cheatsheet-bind-lineheight {
-    min-height: 2.045rem;
+    min-height: 2.045rem * $scale_factor;
 }
 
 .cheatsheet-key {
     @include techfont;
-    min-height: 1.364rem;
-    min-width: 1.364rem;
-    margin: 0.17rem;
-    padding: 0.136rem 0.205rem;
-    -gtk-outline-radius: 0.409rem;
+    min-height: 1.364rem * $scale_factor;
+    min-width: 1.364rem * $scale_factor;
+    margin: 0.17rem * $scale_factor;
+    padding: 0.136rem * $scale_factor 0.205rem * $scale_factor;
+    -gtk-outline-radius: 0.409rem * $scale_factor;
     color: $cheatsheetTitle;
-    border-radius: 0.409rem;
-    border: 0.068rem solid $cheatsheetTitle;
-    box-shadow: 0rem 0.136rem 0rem $cheatsheetTitle;
+    border-radius: 0.409rem * $scale_factor;
+    border: 0.068rem * $scale_factor solid $cheatsheetTitle;
+    box-shadow: 0rem * $scale_factor 0.136rem * $scale_factor 0rem * $scale_factor $cheatsheetTitle;
 }
 
 .cheatsheet-key-notkey {
-    min-height: 1.364rem;
-    padding: 0.136rem 0.205rem;
-    margin: 0.17rem;
+    min-height: 1.364rem * $scale_factor;
+    padding: 0.136rem * $scale_factor 0.205rem * $scale_factor;
+    margin: 0.17rem * $scale_factor;
     color: $onLayer0;
 }
 
@@ -39,7 +39,7 @@
     .cheatsheet-color-#{$i} {
         color: nth($cheatsheetColors, $i);
         border-color: nth($cheatsheetColors, $i);
-        box-shadow: 0rem 0.136rem 0rem nth($cheatsheetColors, $i);
+        box-shadow: 0rem * $scale_factor 0.136rem * $scale_factor 0rem * $scale_factor nth($cheatsheetColors, $i);
     }
 }
 
@@ -48,8 +48,8 @@
 .cheatsheet-closebtn {
     @include element_decel;
     @include full-rounding;
-    min-width: 2.386rem;
-    min-height: 2.386rem;
+    min-width: 2.386rem * $scale_factor;
+    min-height: 2.386rem * $scale_factor;
 }
 
 .cheatsheet-closebtn:hover,
@@ -63,12 +63,12 @@
 
 .cheatsheet-category-title {
     @include titlefont;
-    font-size: 1.705rem;
+    font-size: 1.705rem * $scale_factor;
 }
 
 @mixin cheatsheet-periodictable-element {
-    min-width: 5.455rem;
-    min-height: 5.455rem;
+    min-width: 5.455rem * $scale_factor;
+    min-height: 5.455rem * $scale_factor;
     @include small-rounding;
     background-color: $layer1;
     color: $onLayer1;
@@ -76,14 +76,14 @@
 
 .cheatsheet-periodictable-elementsymbol {
     @include readingfont;
-    font-size: 1.705rem;
+    font-size: 1.705rem * $scale_factor;
     font-weight: bold;
 }
 
 .cheatsheet-periodictable-elementnum {
     @include full-rounding;
-    min-width: 1.364rem;
-    min-height: 1.364rem;
+    min-width: 1.364rem * $scale_factor;
+    min-height: 1.364rem * $scale_factor;
     background-color: $term0;
     color: $onBackground;
 }
@@ -96,8 +96,8 @@ $coloractinium: $term7;
 
 .cheatsheet-periodictable-empty {
     @include small-rounding;
-    min-width: 5.455rem;
-    min-height: 5.455rem;
+    min-width: 5.455rem * $scale_factor;
+    min-height: 5.455rem * $scale_factor;
 }
 
 .cheatsheet-periodictable-metal {
@@ -132,14 +132,14 @@ $coloractinium: $term7;
 
 .cheatsheet-periodictable-legend-color-wrapper {
     @include full-rounding;
-    padding: 0.273rem;
-    border: 0.136rem solid $onLayer0;
+    padding: 0.273rem * $scale_factor;
+    border: 0.136rem * $scale_factor solid $onLayer0;
 }
 
 @mixin cheatsheet-periodictable-legend-color {
     @include full-rounding;
-    min-width: 1.023rem;
-    min-height: 1.023rem;
+    min-width: 1.023rem * $scale_factor;
+    min-height: 1.023rem * $scale_factor;
 }
 
 .cheatsheet-periodictable-legend-color-metal {

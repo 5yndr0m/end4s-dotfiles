@@ -112,7 +112,7 @@ let configOptions = {
         'pages': {
             'order': ["apis", "tools"],
             'apis': {
-                'order': ["gemini", "gpt", "waifu", "booru"],
+                'order': ["gemini", "gpt"],
             }
         },
     },
@@ -139,7 +139,7 @@ let configOptions = {
         'dateFormat': "%d/%m", // On notif time
     },
     'weather': {
-        'city': "",
+        'city': "Kegalle",
         'preferredUnit': "C", // Either C or F
     },
     'workspaces': {
@@ -148,7 +148,7 @@ let configOptions = {
     'dock': {
         'enabled': false,
         'hiddenThickness': 5,
-        'pinnedApps': ['firefox', 'org.gnome.Nautilus'],
+        'pinnedApps': ['firefox', 'org.gnome.Nautilus','zed'],
         'layer': 'top',
         'monitorExclusivity': true, // Dock will move to other monitor along with focus if enabled
         'searchPinnedAppIcons': false, // Try to search for the correct icon if the app class isn't an icon name
@@ -239,10 +239,6 @@ let configOptions = {
 let optionsOkay = true;
 function overrideConfigRecursive(userOverrides, configOptions = {}, check = true) {
     for (const [key, value] of Object.entries(userOverrides)) {
-        if (!check) {
-            configOptions[key] = value;
-            continue;
-        }
         if (configOptions[key] === undefined && check) {
             optionsOkay = false;
         }
@@ -250,6 +246,8 @@ function overrideConfigRecursive(userOverrides, configOptions = {}, check = true
             if (key === "substitutions" || key === "regexSubstitutions" || key === "extraGptModels") {
                 overrideConfigRecursive(value, configOptions[key], false);
             } else overrideConfigRecursive(value, configOptions[key]);
+        } else {
+            configOptions[key] = value;
         }
     }
 }

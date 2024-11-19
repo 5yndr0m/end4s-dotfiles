@@ -3,53 +3,53 @@
 // }
 
 .osd-bg {
-    min-width: 8.864rem;
-    min-height: 3.409rem;
+    min-width: 8.864rem * $scale_factor;
+    min-height: 3.409rem * $scale_factor;
 }
 
 .osd-value {
     @include elevation-border;
     @include elevation2;
     background-color: $layer0;
-    border-radius: 1.023rem;
-    padding: 0.625rem 1.023rem;
-    padding-top: 0.313rem;
+    border-radius: 1.023rem * $scale_factor;
+    padding: 0.625rem * $scale_factor 1.023rem * $scale_factor;
+    padding-top: 0.313rem * $scale_factor;
 }
 
 .osd-progress {
-    min-height: 0.955rem;
-    min-width: 0.068rem;
-    padding: 0rem;
-    border-radius: 10rem;
+    min-height: 0.955rem * $scale_factor;
+    min-width: 0.068rem * $scale_factor;
+    padding: 0rem * $scale_factor;
+    border-radius: 10rem * $scale_factor;
     @include fluent_decel;
 
     trough {
-        min-height: 0.954rem;
-        min-width: 0.068rem;
-        border-radius: 10rem;
+        min-height: 0.954rem * $scale_factor;
+        min-width: 0.068rem * $scale_factor;
+        border-radius: 10rem * $scale_factor;
         background-color: $layer2;
         // border: 0.068rem solid $onSecondaryContainer;
     }
 
     progress {
         @include fluent_decel;
-        min-height: 0.680rem;
-        min-width: 0.680rem;
-        margin: 0rem 0.137rem;
-        border-radius: 10rem;
+        min-height: 0.680rem * $scale_factor;
+        min-width: 0.680rem * $scale_factor;
+        margin: 0rem * $scale_factor 0.137rem * $scale_factor;
+        border-radius: 10rem * $scale_factor;
         background-color: $onLayer2;
     }
 }
 
 .osd-label {
-    font-size: 1.023rem;
+    font-size: 1.023rem * $scale_factor;
     font-weight: 500;
-    margin-top: 0.341rem;
+    margin-top: 0.341rem * $scale_factor;
 }
 
 .osd-value-txt {
     @include titlefont;
-    font-size: 1.688rem;
+    font-size: 1.688rem * $scale_factor;
     font-weight: 500;
     color: $onLayer0;
 }
@@ -72,33 +72,33 @@
 }
 
 .osd-notifs {
-    padding-top: 0.313rem;
+    padding-top: 0.313rem * $scale_factor;
 }
 
 .osd-colorscheme {
-    border-radius: 1.023rem;
+    border-radius: 1.023rem * $scale_factor;
     background-color: $layer0;
-    padding: 0.313rem 0.626rem;
+    padding: 0.313rem * $scale_factor 0.626rem * $scale_factor;
     @include elevation2;
 }
 
 .osd-colorscheme-settings {
     background-color: $layer1;
-    padding: 0.313rem 0.626rem;
+    padding: 0.313rem * $scale_factor 0.626rem * $scale_factor;
     @include small-rounding;
 }
 
 .osd-color {
-    border-radius: 0.650rem;
-    -gtk-outline-radius: 0.650rem;
-    min-width: 2.727rem;
-    min-height: 1.705rem;
-    padding: 0rem 0.341rem;
+    border-radius: 0.650rem * $scale_factor;
+    -gtk-outline-radius: 0.650rem * $scale_factor;
+    min-width: 2.727rem * $scale_factor;
+    min-height: 1.705rem * $scale_factor;
+    padding: 0rem * $scale_factor 0.341rem  * $scale_factor;
     font-weight: bold;
 
     box {
         @include small-rounding;
-        margin: 0.409rem;
+        margin: 0.409rem * $scale_factor;
     }
 }
 
@@ -148,7 +148,7 @@
 .osd-color-surface {
     background-color: $surface;
     color: $onSurface;
-    border: 0.068rem solid $outlineVariant;
+    border: 0.068rem * $scale_factor solid $outlineVariant;
     box { background-color: $onSurface; }
 }
 
@@ -184,8 +184,8 @@
 .osd-settings-btn-arrow {
     @include full-rounding;
     @include icon-material;
-    min-width: 1.705rem;
-    min-height: 1.705rem;
+    min-width: 1.705rem * $scale_factor;
+    min-height: 1.705rem * $scale_factor;
     color: $onSurface;
 
     &:hover {
